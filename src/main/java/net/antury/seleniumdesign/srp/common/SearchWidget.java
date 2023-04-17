@@ -1,4 +1,4 @@
-package net.antury.seleniumdesign.srp;
+package net.antury.seleniumdesign.srp.common;
 
 import com.google.common.util.concurrent.Uninterruptibles;
 import org.openqa.selenium.WebDriver;

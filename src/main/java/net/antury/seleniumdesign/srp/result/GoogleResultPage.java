@@ -1,5 +1,7 @@
-package net.antury.seleniumdesign.srp;
+package net.antury.seleniumdesign.srp.result;
 
+import net.antury.seleniumdesign.srp.common.SearchSuggestion;
+import net.antury.seleniumdesign.srp.common.SearchWidget;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 

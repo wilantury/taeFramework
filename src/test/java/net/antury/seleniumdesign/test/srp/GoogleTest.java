@@ -1,7 +1,7 @@
 package net.antury.seleniumdesign.test.srp;
 
-import net.antury.seleniumdesign.srp.GoogleMainPage;
-import net.antury.seleniumdesign.srp.GoogleResultPage;
+import net.antury.seleniumdesign.srp.main.GoogleMainPage;
+import net.antury.seleniumdesign.srp.result.GoogleResultPage;
 import net.antury.seleniumdesign.test.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;

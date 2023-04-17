@@ -1,4 +1,4 @@
-package net.antury.seleniumdesign.srp;
+package net.antury.seleniumdesign.srp.common;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;

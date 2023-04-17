@@ -1,5 +1,6 @@
-package net.antury.seleniumdesign.srp;
+package net.antury.seleniumdesign.srp.result;
 
+import net.antury.seleniumdesign.srp.common.AbstractComponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
