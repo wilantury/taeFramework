@@ -18,9 +18,4 @@ public class GoogleFrench extends GoogleEnglish{
         this.driver.get("https://www.google.fr");
         this.language.click();
     }
-
-    @Override
-    public int getResultsCount() {
-        return 0;
-    }
 }
