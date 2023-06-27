@@ -4,6 +4,7 @@
 # Compiled class file
 *.class
 driver/
+target/
 # Log file
 *.log
 
