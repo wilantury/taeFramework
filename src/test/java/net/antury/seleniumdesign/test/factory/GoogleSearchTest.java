@@ -24,6 +24,7 @@ public class GoogleSearchTest extends BaseTest {
                 {"ENG", "Selenium"},
                 {"FR", "docker"},
                 {"SA", "Python"},
+                {"ES", "Golang"},
         };
     }
 }
