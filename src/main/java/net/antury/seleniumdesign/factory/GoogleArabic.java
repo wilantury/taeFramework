@@ -1,10 +1,10 @@
-package net.antury.seleniumdesign.test.factory;
+package net.antury.seleniumdesign.factory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class GoogleArabic extends GoogleEnglish {
+class GoogleArabic extends GoogleEnglish {
 
     @FindBy(css = "div#SIvCob>a")
     private WebElement language;

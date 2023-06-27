@@ -1,4 +1,4 @@
-package net.antury.seleniumdesign.test.factory;
+package net.antury.seleniumdesign.factory;
 
 public abstract class GooglePage {
     public abstract void launchSite();
