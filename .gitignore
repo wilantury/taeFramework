@@ -6,6 +6,7 @@
 driver/
 # Log file
 *.log
+target/
 
 # BlueJ files
 *.ctxt
