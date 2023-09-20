@@ -1,9 +1,6 @@
 package net.antury.seleniumdesign.test.strategy;
 
-import net.antury.seleniumdesign.strategy.CreditCard;
-import net.antury.seleniumdesign.strategy.NetBanking;
-import net.antury.seleniumdesign.strategy.PaymentOption;
-import net.antury.seleniumdesign.strategy.PaymentScreen;
+import net.antury.seleniumdesign.strategy.*;
 import net.antury.seleniumdesign.test.BaseTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -28,6 +25,33 @@ public class PaymentScreenTest extends BaseTest {
         this.paymentScreen.pay(paymentDetails);
         String orderNumber = this.paymentScreen.getOrder().placeOrder();
         System.out.println("Order number: " + orderNumber);
+    }
+
+    @Test(dataProvider = "getDataFactory")
+    public void paymentFactoryTest(String paymentOption, Map<String, String> paymentDetails){
+        this.paymentScreen.goTo();
+        this.paymentScreen.getUserInformation().enterDetails("wilson", "antury", "wilantury@gmail.com");
+        this.paymentScreen.setPaymentOption(PaymentOptionFactory.get(paymentOption));
+        this.paymentScreen.pay(paymentDetails);
+        String orderNumber = this.paymentScreen.getOrder().placeOrder();
+        System.out.println("Order number: " + orderNumber);
+    }
+
+    @DataProvider
+    public Object[][] getDataFactory(){
+        Map<String,String> cc = Maps.newHashMap();
+        cc.put("cc","12345455345");
+        cc.put("year", "25");
+        cc.put("cvv", "107");
+
+        Map<String,String> nb = Maps.newHashMap();
+        nb.put("bank","BOFA");
+        nb.put("account", "123988748743");
+        nb.put("pin", "999");
+        return new Object[][]{
+                {"CC", cc},
+                {"NB", nb}
+        };
     }
 
     @DataProvider
