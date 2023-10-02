@@ -9,17 +9,17 @@ public class PaymentScreen {
 
     private WebDriver driver;
     private UserInformation userInformation;
-    private Order order;
+    private OrderComponent orderComponent;
     private PaymentOption paymentOption;
 
     public PaymentScreen(final WebDriver driver){
         this.driver = driver;
         this.userInformation = PageFactory.initElements(driver, UserInformation.class);
-        this.order = PageFactory.initElements(driver, Order.class);
+        this.orderComponent = new OrderComponentProxy(driver);
     }
 
-    public Order getOrder() {
-        return order;
+    public OrderComponent getOrder() {
+        return this.orderComponent;
     }
 
     public void goTo(){
